@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/BakPeter/NodeJsMicroservicesMessageBrockerDemoDocker/issues"
   },
-  "homepage": "https://github.com/BakPeter/NodeJsMicroservicesMessageBrockerDemoDocker#readme"
+  "homepage": "https://github.com/BakPeter/NodeJsMicroservicesMessageBrockerDemoDocker#readme",
+  "dependencies": {
+    "amqplib": "^0.10.2"
+  }
 }
