@@ -1,0 +1,4 @@
+{
+  "serviceName": "consumer_2",
+  "topics": ["topic.one", "topic.two", "topic.three", "topic.four"]
+}
