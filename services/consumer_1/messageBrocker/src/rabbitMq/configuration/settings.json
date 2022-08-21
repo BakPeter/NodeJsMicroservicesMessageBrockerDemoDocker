@@ -1,0 +1,5 @@
+{
+  "hostName": "amqp://messageBrocker:5672",
+  "exchangeName": "testExchange",
+  "exchangeType": "topic"
+}

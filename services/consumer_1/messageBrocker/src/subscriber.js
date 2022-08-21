@@ -1,6 +1,6 @@
 const {
   consume: consumeAdp,
-} = require('./rabbitMq/adapters/subscriberRabbitMqAdapter');
+} = require('../src/rabbitMq/adapters/subscriberRabbitMqAdapter');
 
 function consume(consumerName, topics, onMessageCallback, onErrorCallback) {
   consumeAdp(consumerName, topics, onMessageCallback, onErrorCallback);

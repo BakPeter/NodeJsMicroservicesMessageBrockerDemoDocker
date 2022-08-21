@@ -1,15 +1,30 @@
 version: '3.4'
 
 services:
-  messageBroker:
+  messageBrocker:
     image: rabbitmq:3-management
-    container_name: messageBroker
+    container_name: messageBrocker
     ports:
       - 15672:15672
       - 5672:5672
     networks:
       - main
 
+  consumer1:
+    image: peter/mic-services-demo
+    container_name: consumer_1
+    ports:
+      - 8080:8080
+    depends_on:
+      - messageBrocker
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 3
+        window: 120s
+    networks:
+      - main
 networks:
   main:
     name: nodesj-services-demo-network
